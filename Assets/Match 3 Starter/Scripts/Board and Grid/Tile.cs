@@ -24,6 +24,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class Tile : MonoBehaviour {
 	private static Color selectedColor = new Color(.5f, .5f, .5f, 1.0f);
 	private static Tile previousSelected = null;
@@ -50,8 +51,8 @@ public class Tile : MonoBehaviour {
 		previousSelected = null;
 	}
 
-	void onMouseDown() {
-		if (render.sprite == null || BoardManager.instance.IsShifting) {
+	void OnMouseDown() {
+        if (render.sprite == null || BoardManager.instance.IsShifting) {
 			return;
 		}
 
